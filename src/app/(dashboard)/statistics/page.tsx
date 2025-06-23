@@ -13,6 +13,8 @@ import fetchWikipediaSummary from '@/utils/fetchWikipediaSummary'
 import { Link as LinkIcon, Loader, Share2 } from 'lucide-react'
 import toast from 'react-hot-toast'
 
+export const dynamic = 'force-dynamic'
+
 export default function StatisticsPage() {
   const [artist, setArtist] = useState('')
   const [loading, setLoading] = useState(false)
@@ -23,6 +25,7 @@ export default function StatisticsPage() {
 
   const { history, addToHistory, clearHistory } = useSearchHistory()
   const searchParams = useSearchParams()
+  
 
   // Shareable Search auto-load
   useEffect(() => {
